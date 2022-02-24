@@ -1,0 +1,41 @@
+Assignment part 1:
+================================================================
+
+Create Spring boot app with rest APIs for-
+•	Create author record
+•	Fetch details of an author by author id
+•	Fetching all authors
+•	Fetch list of all books of an author
+•	Fetch details of a book by author id and book id
+
+
+Assignment part 2:
+================================================================
+
+1. Create authentication layer using UUID to sign on and sign off.
+     - Use a static list or a cache library to save authenticated tokens.
+     - Require an authenticated token in request header for all requests to your server.
+2. Add input validation to existing endpoints.
+3. Send correct http response codes. (ex. 400 for bad requests, 401 for users that are not authenticated.)
+4. Follow REST architecture practices when creating uri paths.
+5. Gracefully handle all exceptions.
+
+
+Example/Notes:
+1. use spring-boot-starter-security
+2. create a hash map to store tokens.
+3. pass some hardcoded tokens first.
+4. hash map is a type of uuid.
+5. at start - hash map will be available.
+6. integrate authenticator using spring security.
+7. create a custom service for authentication -> authService.
+8. request -> header -> key will be auth-token -> 
+9. call custom service with token as input -> authService .. get the hashmap -> check for key value exists or not.
+10. hashmap.contains(key) = true -> user authenticated.....
+
+11. spring boot security with custom authentication in rest api.
+
+12. @Valid ... @Size(min=2...)
+13. ResponseEntity.ok() ....
+
+14. rest architecture - don't have two endpoints.
